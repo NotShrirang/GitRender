@@ -1,18 +1,21 @@
 # 🚀 GitRender
 
-> A vibe coded extension to [@karpathy](https://github.com/karpathy)'s rendergit
+**Transform any GitHub repository into a single, searchable HTML page.**
+
+> A vibe coded app around [@karpathy](https://github.com/karpathy)'s [rendergit](https://github.com/karpathy/rendergit)
 
 <div align="center">
 
-**Transform any GitHub repository into a single, searchable HTML page**
-
-_Perfect for code review, exploration, and instant Ctrl+F across entire codebases_
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNotShrirang%2FGitRender)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-[🌐 **Try Live Demo**](https://gitrender.vercel.app) · [📖 Documentation](#usage) · [🐛 Report Issues](https://github.com/NotShrirang/GitRender/issues)
+---
+
+_Perfect for code review, exploration, and instant Ctrl+F across entire codebases_
+
+**🎯 Simple Usage**: Replace `github.com` in any repo URL with `gitrender.vercel.app` and see the magic!
+
+_Example: `https://github.com/user/repo` → `https://gitrender.vercel.app/user/repo`_
 
 </div>
 
