@@ -1,5 +1,5 @@
 """
-Utility functions for the RenderGit Flask app.
+Utility functions for the GitRender Flask app.
 """
 
 import re

@@ -95,7 +95,7 @@ def _render_repository(repo_url: str, max_bytes: int):
     Returns:
         Tuple of (html_content, stats)
     """
-    tmpdir = tempfile.mkdtemp(prefix="rendergit_")
+    tmpdir = tempfile.mkdtemp(prefix="gitrender_")
     repo_dir = pathlib.Path(tmpdir, "repo")
     
     try:

@@ -15,7 +15,7 @@ def add_navigation_bar(repo_url: str) -> str:
 <nav class="top-nav">
   <a href="/" class="nav-brand">
     <span class="brand-icon">🔧</span>
-    <span>RenderGit</span>
+    <span>GitRender</span>
   </a>
   <div class="nav-actions">
     <a href="{html.escape(repo_url)}" class="nav-btn" target="_blank" rel="noopener">

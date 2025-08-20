@@ -10,7 +10,7 @@ INDEX_TEMPLATE = '''
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RenderGit - GitHub Repository to Single Page</title>
+    <title>GitRender - GitHub Repository to Single Page</title>
     <style>
         * {
             margin: 0;
@@ -192,7 +192,7 @@ INDEX_TEMPLATE = '''
 <body>
     <div class="container">
         <div class="header">
-            <h1>🔧 RenderGit</h1>
+            <h1>🔧 GitRender</h1>
             <p>Flatten any GitHub repository into a single, searchable HTML page</p>
         </div>
         
@@ -333,7 +333,7 @@ ERROR_TEMPLATE = '''
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RenderGit - Error</title>
+    <title>GitRender - Error</title>
     <style>
         * {
             margin: 0;
