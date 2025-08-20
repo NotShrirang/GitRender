@@ -1,68 +1,173 @@
-# rendergit
+# 🚀 GitRender
 
-> Just show me the code.
+> A vibe coded extension to [@karpathy](https://github.com/karpathy)'s rendergit
 
-Tired of clicking around complex file hierarchies of GitHub repos? Do you just want to see all of the code on a single page? Enter `rendergit`. Flatten any GitHub repository into a single, searchable HTML page with syntax highlighting, markdown rendering, and a clean sidebar navigation. Perfect for code review, exploration, and an instant Ctrl+F experience.
+<div align="center">
 
-## Basic usage
+**Transform any GitHub repository into a single, searchable HTML page**
 
-Git clone / pip install this repo somewhere:
+_Perfect for code review, exploration, and instant Ctrl+F across entire codebases_
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNotShrirang%2FGitRender)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+
+[🌐 **Try Live Demo**](https://gitrender.vercel.app) · [📖 Documentation](#usage) · [🐛 Report Issues](https://github.com/NotShrirang/GitRender/issues)
+
+</div>
+
+---
+
+## ✨ What is GitRender?
+
+GitRender flattens any GitHub repository into a **single, searchable HTML page** with beautiful syntax highlighting and intuitive navigation. No more clicking through complex file hierarchies—just pure, instant access to all the code you need.
+
+### 🎯 Perfect for:
+
+- **Code Review**: See the entire codebase at once
+- **Learning**: Explore open-source projects effortlessly
+- **AI Analysis**: Export codebases in LLM-friendly format
+- **Documentation**: Quick reference for project structure
+- **Research**: Compare implementations across multiple files
+
+---
+
+## 🚀 Quick Start
+
+### 🌐 Web Interface (Recommended)
+
+Simply visit our hosted version and paste any GitHub repository URL:
+
+**[🌐 GitRender Web App](https://your-vercel-deployment.vercel.app)**
+
+### 💻 Command Line Interface
+
+#### Installation
 
 ```bash
-git clone https://github.com/karpathy/rendergit
+# Clone the repository
+git clone https://github.com/NotShrirang/GitRender.git
+cd GitRender
 
-cd rendergit
-
-pip install -e .
-```
-
-If you prefer `uv`:
-
-```bash
+# Or with uv (recommended)
 uv venv .venv
-
-source .venv/bin/activate # For Linux/Mac
-source .venv/Scripts/activate # For Windows
-
-uv pip install -e .
+source .venv/bin/activate  # Linux/Mac
+# .venv\Scripts\activate   # Windows
+uv pip install -r requirements.txt
 ```
 
-Now you can just `rendergit` any GitHub url e.g.:
+## ✨ Features
 
-```bash
-rendergit https://github.com/karpathy/nanoGPT
-```
+### 🎨 **Dual View Modes**
 
-The code will:
+- **👤 Human View**: Beautiful interface with syntax highlighting and navigation
+- **🤖 LLM View**: Raw CXML format perfect for AI code analysis
 
-1. Clone the repo to a temporary directory
-2. Render its source code into a single static temporary HTML file
-3. Automatically open the file in your browser
+### 🔍 **Smart Code Processing**
 
-Once open, you can toggle between two views:
+- **Syntax highlighting** for 200+ programming languages via Pygments
+- **Markdown rendering** for documentation files
+- **Smart filtering** automatically skips binaries and oversized files
+- **File size optimization** with configurable limits
 
-- **👤 Human View**: Browse with syntax highlighting, sidebar navigation, visual goodies
-- **🤖 LLM View**: Copy the entire codebase as CXML text to paste into Claude, ChatGPT, etc.
+### 🧭 **Intuitive Navigation**
 
-There's a few other smaller options, see the code.
-
-## Features
-
-- **Dual view modes** - toggle between Human and LLM views
-  - **👤 Human View**: Pretty interface with syntax highlighting and navigation
-  - **🤖 LLM View**: Raw CXML text format - perfect for copying to Claude/ChatGPT for code analysis
-- **Syntax highlighting** for code files via Pygments
-- **Markdown rendering** for README files and docs
-- **Smart filtering** - skips binaries and oversized files
-- **Directory tree** overview at the top
+- **Directory tree** overview with expandable folders
 - **Sidebar navigation** with file links and sizes
-- **Responsive design** that works on mobile
+- **Jump-to-file** functionality
 - **Search-friendly** - use Ctrl+F to find anything across all files
 
-## Contributing
+### 📱 **Modern Design**
 
-I vibe coded this utility a few months ago but I keep using it very often so I figured I'd just share it. I don't super intend to maintain or support it though.
+- **Responsive layout** works on desktop, tablet, and mobile
+- **Clean, minimal interface** focuses on the code
+- **Fast loading** with optimized HTML output
+- **Accessible** design following web standards
 
-## License
+---
 
-Apache 2.0 go nuts
+## 🔧 Technical Details
+
+### Architecture
+
+- **Backend**: Flask web application
+- **Frontend**: Responsive HTML with modern CSS/JS
+- **Deployment**: Optimized for Vercel serverless functions
+- **Code Processing**: Python with Pygments and Markdown libraries
+
+### File Processing
+
+- Supports text files up to 50KB by default (configurable)
+- Automatically detects and skips binary files
+- Processes common code files, documentation, and configuration files
+- Maintains original file structure and relationships
+
+### Performance
+
+- Efficient temporary file handling
+- Optimized HTML generation
+- Smart caching for repeated requests
+- Maximum 60-second processing time on Vercel
+
+---
+
+## 🛠️ Development
+
+### Project Structure
+
+```
+GitRender/
+├── app.py              # Flask web application
+├── index.py            # Vercel entry point
+├── requirements.txt    # Python dependencies
+├── vercel.json        # Vercel deployment configuration
+├── core/              # Core functionality
+│   ├── github_api.py      # GitHub API integration
+│   ├── navigation.py      # Navigation utilities
+│   ├── repo_to_single_page.py  # Main rendering logic
+│   ├── templates.py       # HTML templates
+│   └── utils.py           # Utility functions
+└── README.md          # This file
+```
+
+### Contributing
+
+We welcome contributions! Here's how you can help:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+### Issues and Support
+
+- 🐛 [Report bugs](https://github.com/NotShrirang/GitRender/issues)
+- 💡 [Request features](https://github.com/NotShrirang/GitRender/issues)
+- 💬 [Join discussions](https://github.com/NotShrirang/GitRender/discussions)
+
+---
+
+## 📄 License
+
+This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Original concept and implementation** by [@karpathy](https://github.com/karpathy) - this project is based on his excellent [rendergit](https://github.com/karpathy/rendergit) tool
+- Inspired by the need for better code exploration tools
+- Built with [Pygments](https://pygments.org/) for syntax highlighting
+- Uses [Python-Markdown](https://python-markdown.github.io/) for documentation rendering
+- Deployed on [Vercel](https://vercel.com/) for fast, global access
+
+---
+
+<div align="center">
+
+**Made with ❤️ for developers who love exploring code**
+
+[⭐ Star this repo](https://github.com/NotShrirang/GitRender) if GitRender helped you!
+
+</div>
